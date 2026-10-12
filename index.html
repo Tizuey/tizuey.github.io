@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tizuey | Da Bahia para a Nuvem</title>
+  <meta name="description" content="Tizuey compartilha estudos, projetos e descobertas em Cloud, DevOps, IA e Segurança. Confira também a agenda de eventos de tecnologia.">
+  <meta name="author" content="Tizuey">
+  <meta name="theme-color" content="#FFF8EE">
+
+  <!-- Pré-visualização ao compartilhar o link (WhatsApp, LinkedIn etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Tizuey | Da Bahia para a Nuvem">
+  <meta property="og:description" content="Estudos, projetos e descobertas em Cloud, DevOps, IA e Segurança, mais uma agenda de eventos de tecnologia.">
+  <!-- Depois de publicar, descomente a linha abaixo e troque pelo endereço público do seu site:
+  <meta property="og:image" content="https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/assets/logo-original.png">
+  -->
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!--
+    Dependência externa: fontes Sora e Manrope (Google Fonts).
+    Se não carregarem, o site usa as fontes do sistema (veja --fonte-titulo e --fonte-texto no style.css).
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Sora:wght@600;700&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="pular" href="#agenda">Ir para a agenda de eventos</a>
+
+  <main class="pagina">
+
+    <!-- A. CABEÇALHO PESSOAL -->
+    <header class="cabecalho">
+      <h1 class="so-leitor">Tizuey, da Bahia para a Nuvem</h1>
+
+      <!-- Foto opcional: só aparece se existir o arquivo assets/foto-perfil.png -->
+      <figure class="foto" id="foto" hidden>
+        <img id="foto-img" alt="Foto de Tizuey" width="104" height="104">
+      </figure>
+
+      <img class="logo" src="assets/logo.png" width="918" height="527"
+           alt="Tizuey. Da Bahia para a Nuvem. Letras manuscritas com um sol amarelo, uma nuvem turquesa e uma onda abaixo do nome.">
+
+      <p class="apresentacao">Compartilhando meus estudos, projetos e descobertas em Cloud, DevOps, IA e Segurança.</p>
+
+      <!-- B. LINKEDIN -->
+      <a class="botao"
+         href="https://www.linkedin.com/in/julia-tizuey-hosoy-convertingcoffeeintocode/"
+         target="_blank" rel="noopener noreferrer">
+        Vamos nos conectar no LinkedIn
+        <span class="so-leitor">(abre em nova aba)</span>
+      </a>
+    </header>
+
+    <!-- C. AGENDA DE EVENTOS -->
+    <section class="agenda" id="agenda" aria-labelledby="titulo-agenda">
+      <h2 id="titulo-agenda">Agenda de eventos tech</h2>
+      <p class="agenda-intro">Eventos que acho interessantes para a nossa comunidade. A lista é uma curadoria pessoal e não garante vagas ou inscrições abertas. Confira sempre a página oficial.</p>
+
+      <!-- Eventos em destaque -->
+      <div class="destaque" aria-labelledby="titulo-destaque">
+        <div class="destaque-topo">
+          <h3 id="titulo-destaque">Em destaque</h3>
+          <span class="selo">Curadoria Julia.Cloud</span>
+        </div>
+        <p class="nota-selo">
+          <svg class="seta" viewBox="0 0 48 32" width="40" height="27" aria-hidden="true" focusable="false">
+            <path d="M3 6 C 14 4, 30 8, 40 24 M40 24 L 31 22 M40 24 L 39 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Seleção minha, sem vínculo com os organizadores.
+        </p>
+
+        <ul class="lista-destaque">
+          <li class="evento evento--destaque" data-fim="2026-11-07">
+            <p class="data"><strong>07</strong><span>nov</span></p>
+            <div class="info">
+              <h4>DevFest Lauro de Freitas</h4>
+              <p class="categoria">Comunidade</p>
+              <a class="link" href="https://www.even3.com.br/devfest-lauro-de-freitas-2026-779585/" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do DevFest Lauro de Freitas (abre em nova aba)</span></a>
+            </div>
+          </li>
+
+          <li class="evento evento--destaque" data-fim="2026-12-05">
+            <p class="data"><strong>05</strong><span>dez</span></p>
+            <div class="info">
+              <h4>DevOpsDays Salvador</h4>
+              <p class="categoria">DevOps</p>
+              <a class="link" href="https://tickets.devopsdays.org/devopsdays-salvador/2026/" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do DevOpsDays Salvador (abre em nova aba)</span></a>
+            </div>
+          </li>
+
+          <li class="evento evento--destaque" data-fim="2026-12-07">
+            <p class="data data--periodo"><strong>05 a 07</strong><span>dez</span></p>
+            <div class="info">
+              <h4>Bahia Tech Experience (BTX)</h4>
+              <p class="categoria">Tecnologia e inovação</p>
+              <a class="link" href="https://bahiatechexperience.com.br" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do Bahia Tech Experience (abre em nova aba)</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!--
+        COMO ADICIONAR UM EVENTO:
+        1. Copie um bloco <li class="evento" ...> inteiro.
+        2. Cole no mês certo (ou crie um novo bloco <section class="mes">).
+        3. Troque nome, categoria, data e link.
+        4. Em data-fim, escreva o último dia do evento no formato AAAA-MM-DD.
+           É com ele que o site marca sozinho quando o evento já passou.
+      -->
+
+      <!-- Outubro -->
+      <section class="mes" aria-labelledby="mes-outubro">
+        <h3 id="mes-outubro">Outubro de 2026</h3>
+        <ul class="lista">
+          <li class="evento" data-fim="2026-10-16">
+            <p class="data data--periodo"><strong>13 a 16</strong><span>out</span></p>
+            <div class="info">
+              <h4>SIINTEC</h4>
+              <p class="categoria">Tecnologia</p>
+              <a class="link" href="https://doity.com.br/siintec2026" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do SIINTEC (abre em nova aba)</span></a>
+            </div>
+          </li>
+
+          <li class="evento" data-fim="2026-10-14">
+            <p class="data"><strong>14</strong><span>out</span></p>
+            <div class="info">
+              <h4>III Workshop de Comunicação Quântica</h4>
+              <p class="categoria">Computação quântica</p>
+              <a class="link" href="https://doity.com.br/iii-workshop-de-comunicacao-quantica" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do III Workshop de Comunicação Quântica (abre em nova aba)</span></a>
+            </div>
+          </li>
+
+          <li class="evento" data-fim="2026-10-16">
+            <p class="data"><strong>16</strong><span>out</span></p>
+            <div class="info">
+              <h4>Evidências Inteligentes: IA a Serviço da Justiça</h4>
+              <p class="categoria">Inteligência Artificial</p>
+              <a class="link" href="https://doity.com.br/evidencias-inteligentes-ia-a-servico-da-justica-1#registration" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do evento Evidências Inteligentes (abre em nova aba)</span></a>
+            </div>
+          </li>
+
+          <li class="evento" data-fim="2026-10-20">
+            <p class="data"><strong>20</strong><span>out</span></p>
+            <div class="info">
+              <h4>Alterdata Experience Salvador</h4>
+              <p class="categoria">Tecnologia</p>
+              <a class="link" href="https://www.sympla.com.br/evento/alterdata-experience-salvador/3509482" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do Alterdata Experience Salvador (abre em nova aba)</span></a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Novembro -->
+      <section class="mes" aria-labelledby="mes-novembro">
+        <h3 id="mes-novembro">Novembro de 2026</h3>
+        <ul class="lista">
+          <li class="evento" data-fim="2026-11-04">
+            <p class="data data--periodo"><strong>03 e 04</strong><span>nov</span></p>
+            <div class="info">
+              <h4>ERCAS</h4>
+              <p class="categoria">Computação</p>
+              <a class="link" href="https://centraldesistemas.sbc.org.br/ecos/ercas2026/" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do ERCAS (abre em nova aba)</span></a>
+            </div>
+          </li>
+
+          <li class="evento" data-fim="2026-11-07">
+            <p class="data"><strong>07</strong><span>nov</span></p>
+            <div class="info">
+              <h4>Nullbyte Security Conference</h4>
+              <p class="categoria">Segurança</p>
+              <a class="link" href="https://www.sympla.com.br/evento/nullbyte-security-conference-2026/3385269" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> da Nullbyte Security Conference (abre em nova aba)</span></a>
+            </div>
+          </li>
+
+          <li class="evento" data-fim="2026-11-12">
+            <p class="data"><strong>12</strong><span>nov</span></p>
+            <div class="info">
+              <h4>AI Governance Forum</h4>
+              <p class="categoria">IA e governança</p>
+              <a class="link" href="https://www.sympla.com.br/evento/ai-governance-forum/3469406" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do AI Governance Forum (abre em nova aba)</span></a>
+            </div>
+          </li>
+
+          <li class="evento" data-fim="2026-11-15">
+            <p class="data data--periodo"><strong>13 a 15</strong><span>nov</span></p>
+            <div class="info">
+              <h4>Hackathon SESI</h4>
+              <p class="categoria">Hackathon</p>
+              <a class="link" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=pRWWH3ymFkuB8O2vqLrxrv-53mg9KW1MloPgV_Gvl6dUREM3Q0VFNVFUVk4yRjZXWFlMQkw5NVZRMy4u" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do Hackathon SESI (abre em nova aba)</span></a>
+            </div>
+          </li>
+
+          <li class="evento" data-fim="2026-11-27">
+            <p class="data data--periodo"><strong>24 a 27</strong><span>nov</span></p>
+            <div class="info">
+              <h4>SBESC</h4>
+              <p class="categoria">Sistemas computacionais</p>
+              <a class="link" href="https://sbesc.lisha.ufsc.br/sbesc2026/Registration" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do SBESC (abre em nova aba)</span></a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- D. ENCERRAMENTO -->
+    <footer class="encerramento">
+      <svg class="onda" viewBox="0 0 240 24" width="180" height="18" aria-hidden="true" focusable="false">
+        <path d="M2 14 C 22 2, 42 2, 62 12 S 102 22, 122 12 S 162 2, 182 12 S 222 20, 238 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <p class="fecho">Bora se encontrar nos eventos tech? ☀️</p>
+      <a class="botao"
+         href="https://www.linkedin.com/in/julia-tizuey-hosoy-convertingcoffeeintocode/"
+         target="_blank" rel="noopener noreferrer">
+        Vamos nos conectar no LinkedIn
+        <span class="so-leitor">(abre em nova aba)</span>
+      </a>
+      <p class="assinatura">@tizuey.cloud</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
