@@ -5,25 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Tizuey | Da Bahia para a Nuvem</title>
-  <meta name="description" content="Tizuey compartilha estudos, projetos e descobertas em Cloud, DevOps, IA e Segurança. Confira também a agenda de eventos de tecnologia.">
+  <meta name="description" content="Tizuey compartilha estudos, projetos e descobertas em Cloud, DevOps, IA e Segurança. Confira também a chamada de startups do BTX 2026 e a agenda de eventos de tecnologia.">
   <meta name="author" content="Tizuey">
   <meta name="theme-color" content="#FFF8EE">
 
-  <!-- Pré-visualização ao compartilhar o link (WhatsApp, LinkedIn etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Tizuey | Da Bahia para a Nuvem">
   <meta property="og:description" content="Estudos, projetos e descobertas em Cloud, DevOps, IA e Segurança, mais uma agenda de eventos de tecnologia.">
-  <!-- Depois de publicar, descomente a linha abaixo e troque pelo endereço público do seu site:
-  <meta property="og:image" content="https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/assets/logo-original.png">
-  -->
 
   <link rel="icon" type="image/png" href="assets/favicon.png">
 
-  <!--
-    Dependência externa: fontes Sora e Manrope (Google Fonts).
-    Se não carregarem, o site usa as fontes do sistema (veja --fonte-titulo e --fonte-texto no style.css).
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Sora:wght@600;700&display=swap">
@@ -31,7 +23,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="pular" href="#agenda">Ir para a agenda de eventos</a>
+  <a class="pular" href="#btx-startups">Ir para a chamada de startups do BTX</a>
+  <a class="pular pular--2" href="#agenda">Ir para a agenda de eventos</a>
 
   <main class="pagina">
 
@@ -39,17 +32,15 @@
     <header class="cabecalho">
       <h1 class="so-leitor">Tizuey, da Bahia para a Nuvem</h1>
 
-      <!-- Foto opcional: só aparece se existir o arquivo assets/foto-perfil.png -->
       <figure class="foto" id="foto" hidden>
         <img id="foto-img" alt="Foto de Tizuey" width="104" height="104">
       </figure>
 
-      <img class="logo" src="assets/logo.png" width="918" height="527"
+      <img class="logo" src="assets/logo.png" width="859" height="468"
            alt="Tizuey. Da Bahia para a Nuvem. Letras manuscritas com um sol amarelo, uma nuvem turquesa e uma onda abaixo do nome.">
 
       <p class="apresentacao">Compartilhando meus estudos, projetos e descobertas em Cloud, DevOps, IA e Segurança.</p>
 
-      <!-- B. LINKEDIN -->
       <a class="botao"
          href="https://www.linkedin.com/in/julia-tizuey-hosoy-convertingcoffeeintocode/"
          target="_blank" rel="noopener noreferrer">
@@ -58,16 +49,66 @@
       </a>
     </header>
 
+    <!-- B2. CHAMADA DE STARTUPS: BTX 2026
+         Depois das 18h de 31/10/2026 (horário de Brasília), o script no final da página
+         esconde os botões e mostra o aviso de inscrições encerradas.
+         Quando não precisar mais da chamada, apague este bloco inteiro (da linha <section class="chamada"> até </section>). -->
+    <section class="chamada" id="btx-startups" aria-labelledby="titulo-chamada" data-encerra="2026-10-31T18:00:00-03:00">
+      <p class="chamada-etiqueta">Para startups baianas</p>
+      <h2 id="titulo-chamada">BTX 2026 está selecionando startups expositoras</h2>
+      <p class="chamada-texto">Até 120 startups poderão ser selecionadas para expor no Bahia Tech Experience, de 5 a 7 de dezembro, no Centro de Convenções de Salvador.</p>
+
+      <p class="chamada-prazo">
+        <span>Inscrições gratuitas até</span>
+        <strong>31/10</strong>
+        <span>às 18h, horário de Brasília</span>
+      </p>
+
+      <dl class="chamada-datas">
+        <div><dt>13/10</dt><dd>Abertura das inscrições</dd></div>
+        <div><dt>13/11</dt><dd>Divulgação das selecionadas</dd></div>
+        <div><dt>05 a 07/12</dt><dd>Evento: BTX 2026</dd></div>
+      </dl>
+
+      <ul class="chamada-regras">
+        <li>CNPJ ativo e regular no estado da Bahia</li>
+        <li>Startup em tração, com vendas em andamento, ou com produto ou solução finalizado e pronto para comercialização ou utilização</li>
+        <li>Uma inscrição por CNPJ</li>
+        <li>Duas pessoas da equipe presentes, de forma presencial, nos três dias do evento</li>
+      </ul>
+
+      <div class="acoes">
+        <a class="botao botao--amarelo"
+           href="https://ecosmais.com.br/formulario/c1d71838bfd9b64f5c6c551725301f1fadfcf74858169e3a"
+           target="_blank" rel="noopener noreferrer">
+          Fazer a inscrição
+          <span class="so-leitor">de startup expositora no BTX 2026 (abre em nova aba)</span>
+        </a>
+        <a class="botao botao--contorno"
+           href="https://drive.google.com/drive/folders/1CG5T4LtcaJzUqHCqp4aRKf33auPNtRjw?usp=sharing"
+           target="_blank" rel="noopener noreferrer">
+          Ler o regulamento
+          <span class="so-leitor">completo do BTX 2026 (abre em nova aba)</span>
+        </a>
+      </div>
+
+      <p class="chamada-encerrada" hidden>Inscrições encerradas em 31/10, às 18h. Obrigada por acompanhar!</p>
+
+      <p class="chamada-nota">
+        Dúvidas: <a href="mailto:startupba@ba.sebrae.com.br">startupba@ba.sebrae.com.br</a><br>
+        Divulgação independente, feita por mim. A inscrição não garante a seleção; as informações oficiais estão no regulamento.
+      </p>
+    </section>
+
     <!-- C. AGENDA DE EVENTOS -->
     <section class="agenda" id="agenda" aria-labelledby="titulo-agenda">
       <h2 id="titulo-agenda">Agenda de eventos tech</h2>
       <p class="agenda-intro">Eventos que acho interessantes para a nossa comunidade. A lista é uma curadoria pessoal e não garante vagas ou inscrições abertas. Confira sempre a página oficial.</p>
 
-      <!-- Eventos em destaque -->
+      <!-- Top eventos -->
       <div class="destaque" aria-labelledby="titulo-destaque">
         <div class="destaque-topo">
-          <h3 id="titulo-destaque">Em destaque</h3>
-          <span class="selo">Curadoria Tizuey.Cloud</span>
+          <h3 id="titulo-destaque">Top eventos</h3>
         </div>
         <p class="nota-selo">
           <svg class="seta" viewBox="0 0 48 32" width="40" height="27" aria-hidden="true" focusable="false">
@@ -105,15 +146,6 @@
           </li>
         </ul>
       </div>
-
-      <!--
-        COMO ADICIONAR UM EVENTO:
-        1. Copie um bloco <li class="evento" ...> inteiro.
-        2. Cole no mês certo (ou crie um novo bloco <section class="mes">).
-        3. Troque nome, categoria, data e link.
-        4. Em data-fim, escreva o último dia do evento no formato AAAA-MM-DD.
-           É com ele que o site marca sozinho quando o evento já passou.
-      -->
 
       <!-- Outubro -->
       <section class="mes" aria-labelledby="mes-outubro">
@@ -234,6 +266,20 @@
     </footer>
 
   </main>
+
+  <!-- Encerra sozinha a chamada do BTX depois do prazo (31/10/2026, 18h, horário de Brasília) -->
+  <script>
+    (function () {
+      var chamada = document.getElementById("btx-startups");
+      if (!chamada) return;
+      var fim = new Date(chamada.getAttribute("data-encerra"));
+      if (!isNaN(fim) && new Date() > fim) {
+        chamada.classList.add("encerrada");
+        var aviso = chamada.querySelector(".chamada-encerrada");
+        if (aviso) aviso.hidden = false;
+      }
+    })();
+  </script>
 
   <script src="script.js"></script>
 </body>
