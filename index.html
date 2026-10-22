@@ -14,7 +14,7 @@
   <meta property="og:title" content="Tizuey | Da Bahia para a Nuvem">
   <meta property="og:description" content="Estudos, projetos e descobertas em Cloud, DevOps, IA e Segurança, mais uma agenda de eventos de tecnologia.">
 
-  <link rel="icon" type="image/png" href="assets/favicon_suncloud.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,6 @@
 
   <main class="pagina">
 
-    <!-- CABEÇALHO -->
     <header class="cabecalho">
       <h1 class="so-leitor">Tizuey, da Bahia para a Nuvem</h1>
 
@@ -49,10 +48,6 @@
       </a>
     </header>
 
-    <!-- DROPDOWN 1: CHAMADA DE STARTUPS (BTX 2026)
-         Depois das 18h de 31/10/2026 (horário de Brasília) o script no final da página
-         troca o subtítulo por "Inscrições encerradas" e esconde os botões.
-         Para remover a chamada depois, apague este bloco inteiro (de <details ... id="btx-startups"> até </details>). -->
     <details class="bloco bloco--btx" id="btx-startups" data-encerra="2026-10-31T18:00:00-03:00">
       <summary>
         <span class="bloco-icone" aria-hidden="true">
@@ -112,7 +107,6 @@
       </div>
     </details>
 
-    <!-- DROPDOWN 2: AGENDA DE EVENTOS -->
     <details class="bloco bloco--agenda" id="agenda">
       <summary>
         <span class="bloco-icone bloco-icone--turquesa" aria-hidden="true">
@@ -128,16 +122,6 @@
       <div class="bloco-conteudo">
         <p class="agenda-intro">Eventos que acho interessantes para a nossa comunidade. A lista é uma curadoria pessoal e não garante vagas ou inscrições abertas. Confira sempre a página oficial.</p>
 
-        <!--
-          COMO ADICIONAR UM EVENTO:
-          1. Copie um bloco <li class="evento" ...> inteiro.
-          2. Cole dentro do mês certo (ou copie um bloco <details class="sub"> para criar um mês novo).
-          3. Troque nome, categoria, data e link.
-          4. Em data-fim, escreva o último dia do evento no formato AAAA-MM-DD.
-             É com ele que o site marca sozinho quando o evento já passou.
-        -->
-
-        <!-- Top eventos (abre por padrão) -->
         <details class="sub sub--top" open>
           <summary>
             <span class="sub-textos">
@@ -176,7 +160,6 @@
           </ul>
         </details>
 
-        <!-- Novembro -->
         <details class="sub">
           <summary>
             <span class="sub-textos">
@@ -242,7 +225,6 @@
           </ul>
         </details>
 
-        <!-- Outubro (eventos que já aconteceram) -->
         <details class="sub">
           <summary>
             <span class="sub-textos">
@@ -292,7 +274,6 @@
       </div>
     </details>
 
-    <!-- ENCERRAMENTO -->
     <footer class="encerramento">
       <svg class="onda" viewBox="0 0 240 24" width="180" height="18" aria-hidden="true" focusable="false">
         <path d="M2 14 C 22 2, 42 2, 62 12 S 102 22, 122 12 S 162 2, 182 12 S 222 20, 238 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -309,8 +290,6 @@
 
   </main>
 
-  <!-- Abre o dropdown certo quando o link termina com #btx-startups ou #agenda,
-       e encerra sozinha a chamada do BTX depois do prazo (31/10/2026, 18h, horário de Brasília). -->
   <script>
     (function () {
       function abrirPeloEndereco() {
