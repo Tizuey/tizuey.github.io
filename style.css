@@ -1,8 +1,3 @@
-/* =========================================================
-   Tizuey | Link na Bio
-   Paleta oficial e fontes ficam todas aqui, no topo.
-   ========================================================= */
-
 :root {
   --turquesa-mar: #12B5A5;
   --amarelo-sol: #FFC83D;
@@ -38,8 +33,6 @@ img { max-width: 100%; height: auto; display: block; }
 h1, h2, h3, h4, p, ul, dl, dd { margin: 0; }
 ul { padding: 0; list-style: none; }
 
-/* ---------- Acessibilidade ---------- */
-
 .so-leitor {
   position: absolute;
   width: 1px; height: 1px;
@@ -73,15 +66,11 @@ summary:focus-visible {
   outline-offset: -5px;
 }
 
-/* ---------- Estrutura ---------- */
-
 .pagina {
   max-width: var(--coluna);
   margin: 0 auto;
   padding: 2rem 1.25rem 3rem;
 }
-
-/* ---------- Cabeçalho ---------- */
 
 .cabecalho {
   display: flex;
@@ -117,7 +106,6 @@ summary:focus-visible {
   line-height: 1.5;
 }
 
-/* Botão */
 .botao {
   display: inline-block;
   padding: .95rem 1.75rem;
@@ -139,8 +127,6 @@ summary:focus-visible {
   box-shadow: 2px 2px 0 var(--amarelo-sol);
 }
 .botao:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--amarelo-sol); }
-
-/* ---------- Dropdowns principais ---------- */
 
 .bloco {
   margin-top: 1rem;
@@ -190,7 +176,6 @@ summary:focus-visible {
   line-height: 1.4;
 }
 
-/* Seta que gira quando abre */
 .bloco-seta {
   flex: none;
   width: .7rem; height: .7rem;
@@ -208,7 +193,6 @@ details[open] > summary > .bloco-seta {
 
 .bloco-conteudo { padding: 1.25rem 1.1rem 1.5rem; }
 
-/* Dropdown do BTX (fundo escuro) */
 .bloco--btx {
   background: var(--grafite);
   color: var(--creme);
@@ -220,8 +204,6 @@ details[open] > summary > .bloco-seta {
 .bloco--btx a:focus-visible,
 .bloco--btx summary:focus-visible { outline-color: var(--amarelo-sol); }
 .bloco--btx .bloco-sub { color: var(--amarelo-sol); font-weight: 700; }
-
-/* ---------- Conteúdo do BTX ---------- */
 
 .chamada-etiqueta {
   display: inline-block;
@@ -331,7 +313,6 @@ details[open] > summary > .bloco-seta {
   text-underline-offset: 3px;
 }
 
-/* Depois do prazo: o script do HTML adiciona a classe "encerrada" */
 .chamada-encerrada {
   margin-top: 1.5rem;
   padding: .85rem 1rem;
@@ -343,14 +324,11 @@ details[open] > summary > .bloco-seta {
 .bloco--btx.encerrada .acoes,
 .bloco--btx.encerrada .chamada-prazo { display: none; }
 
-/* ---------- Conteúdo da agenda ---------- */
-
 .agenda-intro {
   font-size: .95rem;
   max-width: 60ch;
 }
 
-/* Dropdowns internos (Top eventos, meses) */
 .sub {
   margin-top: 1rem;
   background: var(--turquesa-claro);
@@ -386,10 +364,7 @@ details[open] > summary > .bloco-seta {
 
 .sub-conteudo { padding: .25rem 1rem 1.25rem; }
 
-/* Top eventos ganham um selo amarelo na lateral */
 .sub--top { box-shadow: inset 4px 0 0 var(--amarelo-sol); }
-
-/* ---------- Evento (linha de agenda) ---------- */
 
 .lista { display: grid; gap: 1.25rem; }
 
@@ -445,7 +420,6 @@ details[open] > summary > .bloco-seta {
   border-left: 4px solid var(--amarelo-sol);
 }
 
-/* Evento que já passou (marcado pelo script.js) */
 .evento.passou { opacity: .62; }
 .evento.passou .info h4 { text-decoration: line-through; text-decoration-thickness: 1px; }
 .aviso-passou {
@@ -459,8 +433,6 @@ details[open] > summary > .bloco-seta {
   border-radius: 999px;
 }
 .evento.passou .link { margin-left: .5rem; }
-
-/* ---------- Encerramento ---------- */
 
 .encerramento {
   margin-top: 3rem;
@@ -486,8 +458,6 @@ details[open] > summary > .bloco-seta {
   color: var(--turquesa-escuro);
 }
 
-/* ---------- Movimento ---------- */
-
 @keyframes entrada {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: none; }
@@ -498,8 +468,6 @@ details[open] > summary > .bloco-seta {
   .logo { animation: none; }
   .botao, .bloco > summary, .bloco-seta { transition: none; }
 }
-
-/* ---------- Telas maiores ---------- */
 
 @media (min-width: 640px) {
   .pagina { padding-top: 3.5rem; }
