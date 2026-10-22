@@ -1,3 +1,8 @@
+/* =========================================================
+   Tizuey | Link na Bio
+   Paleta oficial e fontes ficam todas aqui, no topo.
+   ========================================================= */
+
 :root {
   --turquesa-mar: #12B5A5;
   --amarelo-sol: #FFC83D;
@@ -33,6 +38,8 @@ img { max-width: 100%; height: auto; display: block; }
 h1, h2, h3, h4, p, ul, dl, dd { margin: 0; }
 ul { padding: 0; list-style: none; }
 
+/* ---------- Acessibilidade ---------- */
+
 .so-leitor {
   position: absolute;
   width: 1px; height: 1px;
@@ -54,7 +61,6 @@ ul { padding: 0; list-style: none; }
   font-weight: 700;
 }
 .pular:focus { top: 1rem; }
-.pular--2 { left: 1rem; }
 .pular--2:focus { top: 4rem; }
 
 a:focus-visible {
@@ -62,6 +68,12 @@ a:focus-visible {
   outline-offset: 3px;
   border-radius: .35rem;
 }
+summary:focus-visible {
+  outline: 3px solid var(--turquesa-mar);
+  outline-offset: -5px;
+}
+
+/* ---------- Estrutura ---------- */
 
 .pagina {
   max-width: var(--coluna);
@@ -69,14 +81,15 @@ a:focus-visible {
   padding: 2rem 1.25rem 3rem;
 }
 
-/* A. Cabeçalho */
+/* ---------- Cabeçalho ---------- */
+
 .cabecalho {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 1.25rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.75rem;
 }
 
 .foto {
@@ -104,6 +117,7 @@ a:focus-visible {
   line-height: 1.5;
 }
 
+/* Botão */
 .botao {
   display: inline-block;
   padding: .95rem 1.75rem;
@@ -126,26 +140,88 @@ a:focus-visible {
 }
 .botao:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--amarelo-sol); }
 
-/* B2. Chamada de startups (BTX 2026) */
-.chamada {
-  position: relative;
-  overflow: hidden;
-  margin-top: .5rem;
-  padding: 1.5rem 1.25rem 1.5rem;
-  background: var(--grafite);
-  color: var(--creme);
+/* ---------- Dropdowns principais ---------- */
+
+.bloco {
+  margin-top: 1rem;
+  background: var(--creme);
+  border: 2px solid var(--grafite);
   border-radius: var(--raio);
+  box-shadow: 3px 3px 0 var(--amarelo-sol);
+  overflow: hidden;
 }
 
-.chamada::after {
-  content: "";
-  position: absolute;
-  right: -2.25rem; top: -2.25rem;
-  width: 6.5rem; height: 6.5rem;
-  background: var(--amarelo-sol);
-  border-radius: 50%;
-  pointer-events: none;
+.bloco > summary {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  padding: 1rem 1.1rem;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color .15s ease;
 }
+.bloco > summary::-webkit-details-marker { display: none; }
+.bloco > summary:hover { background: var(--turquesa-claro); }
+
+.bloco-icone {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.75rem; height: 2.75rem;
+  background: var(--amarelo-sol);
+  color: var(--grafite);
+  border: 2px solid var(--grafite);
+  border-radius: 50%;
+}
+.bloco-icone--turquesa { background: var(--turquesa-mar); }
+
+.bloco-textos { flex: 1; min-width: 0; }
+
+.bloco-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.05rem;
+  line-height: 1.25;
+  letter-spacing: -.01em;
+}
+.bloco-sub {
+  display: block;
+  margin-top: .15rem;
+  font-size: .85rem;
+  line-height: 1.4;
+}
+
+/* Seta que gira quando abre */
+.bloco-seta {
+  flex: none;
+  width: .7rem; height: .7rem;
+  margin: 0 .3rem 0 auto;
+  border-right: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .2s ease;
+}
+details[open] > summary > .bloco-seta {
+  transform: translateY(2px) rotate(-135deg);
+}
+
+.bloco[open] > summary { border-bottom: 2px solid var(--grafite); }
+
+.bloco-conteudo { padding: 1.25rem 1.1rem 1.5rem; }
+
+/* Dropdown do BTX (fundo escuro) */
+.bloco--btx {
+  background: var(--grafite);
+  color: var(--creme);
+  box-shadow: 3px 3px 0 var(--turquesa-mar);
+}
+.bloco--btx > summary:hover { background: rgba(255, 248, 238, .08); }
+.bloco--btx .bloco-icone { border-color: var(--grafite); }
+.bloco--btx[open] > summary { border-bottom-color: rgba(255, 248, 238, .25); }
+.bloco--btx a:focus-visible,
+.bloco--btx summary:focus-visible { outline-color: var(--amarelo-sol); }
+.bloco--btx .bloco-sub { color: var(--amarelo-sol); font-weight: 700; }
+
+/* ---------- Conteúdo do BTX ---------- */
 
 .chamada-etiqueta {
   display: inline-block;
@@ -157,16 +233,7 @@ a:focus-visible {
   border-radius: 999px;
 }
 
-.chamada h2 {
-  margin-top: .85rem;
-  max-width: 22ch;
-  font-family: var(--fonte-titulo);
-  font-size: 1.5rem;
-  line-height: 1.25;
-  letter-spacing: -.01em;
-}
-
-.chamada-texto { margin-top: .75rem; }
+.chamada-texto { margin-top: .85rem; }
 
 .chamada-prazo {
   margin-top: 1.25rem;
@@ -211,10 +278,7 @@ a:focus-visible {
   gap: .55rem;
   font-size: .95rem;
 }
-.chamada-regras li {
-  position: relative;
-  padding-left: 1.25rem;
-}
+.chamada-regras li { position: relative; padding-left: 1.25rem; }
 .chamada-regras li::before {
   content: "";
   position: absolute;
@@ -229,7 +293,7 @@ a:focus-visible {
   display: grid;
   gap: .85rem;
 }
-.chamada .botao { display: block; text-align: center; }
+.bloco--btx .botao { display: block; text-align: center; }
 
 .botao--amarelo {
   background: var(--amarelo-sol);
@@ -255,8 +319,6 @@ a:focus-visible {
   box-shadow: none;
 }
 
-.chamada a:focus-visible { outline-color: var(--amarelo-sol); }
-
 .chamada-nota {
   margin-top: 1.25rem;
   font-size: .85rem;
@@ -269,6 +331,7 @@ a:focus-visible {
   text-underline-offset: 3px;
 }
 
+/* Depois do prazo: o script do HTML adiciona a classe "encerrada" */
 .chamada-encerrada {
   margin-top: 1.5rem;
   padding: .85rem 1rem;
@@ -277,64 +340,63 @@ a:focus-visible {
   font-weight: 700;
 }
 .chamada-encerrada[hidden] { display: none; }
-.chamada.encerrada .acoes,
-.chamada.encerrada .chamada-prazo { display: none; }
+.bloco--btx.encerrada .acoes,
+.bloco--btx.encerrada .chamada-prazo { display: none; }
 
-/* C. Agenda */
-.agenda { margin-top: 3rem; }
-
-.agenda h2 {
-  font-family: var(--fonte-titulo);
-  font-size: 1.75rem;
-  line-height: 1.2;
-  letter-spacing: -.01em;
-}
+/* ---------- Conteúdo da agenda ---------- */
 
 .agenda-intro {
-  margin-top: .75rem;
-  max-width: 60ch;
   font-size: .95rem;
+  max-width: 60ch;
 }
 
-.destaque {
-  margin-top: 2rem;
-  padding: 1.25rem 1.25rem 1.5rem;
-  background: var(--turquesa-claro);
-  border-radius: var(--raio);
-}
-
-.destaque-topo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: .5rem .75rem;
-}
-.destaque h3 {
-  font-family: var(--fonte-titulo);
-  font-size: 1.25rem;
-}
-
-.nota-selo {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  margin-top: .35rem;
-  font-size: .875rem;
-  color: var(--turquesa-escuro);
-}
-.seta { flex: none; }
-
-.lista-destaque {
+/* Dropdowns internos (Top eventos, meses) */
+.sub {
   margin-top: 1rem;
-  display: grid;
-  gap: 1rem;
+  background: var(--turquesa-claro);
+  border-radius: .85rem;
+  overflow: hidden;
 }
+.sub:first-of-type { margin-top: 1.25rem; }
+
+.sub > summary {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .9rem 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+.sub > summary::-webkit-details-marker { display: none; }
+.sub > summary:hover { background: rgba(18, 181, 165, .14); }
+
+.sub-textos { flex: 1; min-width: 0; }
+.sub-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+.sub-nota {
+  display: block;
+  margin-top: .1rem;
+  font-size: .8rem;
+  color: var(--turquesa-escuro);
+  font-weight: 700;
+}
+
+.sub-conteudo { padding: .25rem 1rem 1.25rem; }
+
+/* Top eventos ganham um selo amarelo na lateral */
+.sub--top { box-shadow: inset 4px 0 0 var(--amarelo-sol); }
+
+/* ---------- Evento (linha de agenda) ---------- */
+
+.lista { display: grid; gap: 1.25rem; }
 
 .evento {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
-  position: relative;
 }
 
 .data {
@@ -379,67 +441,18 @@ a:focus-visible {
 .link:hover { color: var(--grafite); text-decoration-color: var(--amarelo-sol); }
 
 .evento--destaque {
-  padding-left: 1rem;
+  padding-left: .9rem;
   border-left: 4px solid var(--amarelo-sol);
 }
-.evento--destaque .data { width: 4.5rem; }
 
-.mes {
-  margin-top: 2.5rem;
-  position: relative;
-  padding-left: 2.75rem;
-}
-
-.mes::before {
-  content: "";
-  position: absolute;
-  left: .35rem; top: 1.1rem; bottom: 0;
-  width: 16px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='80' viewBox='0 0 16 80'><path d='M8 0C14 13 14 27 8 40S2 67 8 80' fill='none' stroke='%2312B5A5' stroke-width='2.5' stroke-linecap='round'/></svg>");
-  background-repeat: repeat-y;
-  background-position: center top;
-}
-
-.mes h3 {
-  position: relative;
-  font-family: var(--fonte-titulo);
-  font-size: 1.3rem;
-  line-height: 1.2;
-}
-.mes h3::before {
-  content: "";
-  position: absolute;
-  left: -2.75rem; top: .1rem;
-  width: 1.5rem; height: 1.5rem;
-  background: var(--amarelo-sol);
-  border: 2px solid var(--grafite);
-  border-radius: 50%;
-}
-
-.lista {
-  margin-top: 1.25rem;
-  display: grid;
-  gap: 1.5rem;
-}
-
-.mes .evento::before {
-  content: "";
-  position: absolute;
-  left: -2.75rem; top: .6rem;
-  width: .75rem; height: .75rem;
-  margin-left: calc(.35rem + 2px);
-  background: var(--turquesa-mar);
-  border: 2px solid var(--creme);
-  border-radius: 50%;
-}
-
+/* Evento que já passou (marcado pelo script.js) */
 .evento.passou { opacity: .62; }
 .evento.passou .info h4 { text-decoration: line-through; text-decoration-thickness: 1px; }
 .aviso-passou {
   display: inline-block;
   margin-top: .3rem;
   padding: .05rem .55rem;
-  background: var(--turquesa-claro);
+  background: var(--creme);
   color: var(--turquesa-escuro);
   font-size: .8rem;
   font-weight: 700;
@@ -447,10 +460,11 @@ a:focus-visible {
 }
 .evento.passou .link { margin-left: .5rem; }
 
-/* D. Encerramento */
+/* ---------- Encerramento ---------- */
+
 .encerramento {
-  margin-top: 3.5rem;
-  padding-top: 2rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -472,6 +486,8 @@ a:focus-visible {
   color: var(--turquesa-escuro);
 }
 
+/* ---------- Movimento ---------- */
+
 @keyframes entrada {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: none; }
@@ -480,15 +496,15 @@ a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .logo { animation: none; }
-  .botao { transition: none; }
+  .botao, .bloco > summary, .bloco-seta { transition: none; }
 }
+
+/* ---------- Telas maiores ---------- */
 
 @media (min-width: 640px) {
   .pagina { padding-top: 3.5rem; }
-  .agenda h2 { font-size: 2rem; }
-  .chamada { padding: 2rem 1.75rem; }
-  .chamada h2 { font-size: 1.75rem; }
+  .bloco-titulo { font-size: 1.15rem; }
+  .bloco-conteudo { padding: 1.5rem 1.5rem 1.75rem; }
   .acoes { grid-template-columns: 1fr 1fr; }
-  .destaque { padding: 1.5rem 1.75rem 1.75rem; }
   .info h4 { font-size: 1.15rem; }
 }
