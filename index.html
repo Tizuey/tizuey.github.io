@@ -28,7 +28,7 @@
 
   <main class="pagina">
 
-    <!-- A. CABEÇALHO PESSOAL -->
+    <!-- CABEÇALHO -->
     <header class="cabecalho">
       <h1 class="so-leitor">Tizuey, da Bahia para a Nuvem</h1>
 
@@ -49,208 +49,250 @@
       </a>
     </header>
 
-    <!-- B2. CHAMADA DE STARTUPS: BTX 2026
-         Depois das 18h de 31/10/2026 (horário de Brasília), o script no final da página
-         esconde os botões e mostra o aviso de inscrições encerradas.
-         Quando não precisar mais da chamada, apague este bloco inteiro (da linha <section class="chamada"> até </section>). -->
-    <section class="chamada" id="btx-startups" aria-labelledby="titulo-chamada" data-encerra="2026-10-31T18:00:00-03:00">
-      <p class="chamada-etiqueta">Para startups baianas</p>
-      <h2 id="titulo-chamada">BTX 2026 está selecionando startups expositoras</h2>
-      <p class="chamada-texto">Até 120 startups poderão ser selecionadas para expor no Bahia Tech Experience, de 5 a 7 de dezembro, no Centro de Convenções de Salvador.</p>
+    <!-- DROPDOWN 1: CHAMADA DE STARTUPS (BTX 2026)
+         Depois das 18h de 31/10/2026 (horário de Brasília) o script no final da página
+         troca o subtítulo por "Inscrições encerradas" e esconde os botões.
+         Para remover a chamada depois, apague este bloco inteiro (de <details ... id="btx-startups"> até </details>). -->
+    <details class="bloco bloco--btx" id="btx-startups" data-encerra="2026-10-31T18:00:00-03:00">
+      <summary>
+        <span class="bloco-icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" focusable="false"><circle cx="12" cy="14" r="5" fill="currentColor"/><path d="M12 2.5v3M4 6.5l2 2M20 6.5l-2 2M2.5 14h3M18.5 14h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="bloco-textos">
+          <h2 class="bloco-titulo">BTX 2026: chamada para startups</h2>
+          <span class="bloco-sub">Inscrições gratuitas até 31/10, 18h</span>
+        </span>
+        <span class="bloco-seta" aria-hidden="true"></span>
+      </summary>
 
-      <p class="chamada-prazo">
-        <span>Inscrições gratuitas até</span>
-        <strong>31/10</strong>
-        <span>às 18h, horário de Brasília</span>
-      </p>
+      <div class="bloco-conteudo">
+        <p class="chamada-etiqueta">Para startups baianas</p>
+        <p class="chamada-texto">O Bahia Tech Experience está selecionando startups expositoras. Até 120 poderão ser selecionadas para expor de 5 a 7 de dezembro, no Centro de Convenções de Salvador.</p>
 
-      <dl class="chamada-datas">
-        <div><dt>13/10</dt><dd>Abertura das inscrições</dd></div>
-        <div><dt>13/11</dt><dd>Divulgação das selecionadas</dd></div>
-        <div><dt>05 a 07/12</dt><dd>Evento: BTX 2026</dd></div>
-      </dl>
-
-      <ul class="chamada-regras">
-        <li>CNPJ ativo e regular no estado da Bahia</li>
-        <li>Startup em tração, com vendas em andamento, ou com produto ou solução finalizado e pronto para comercialização ou utilização</li>
-        <li>Uma inscrição por CNPJ</li>
-        <li>Duas pessoas da equipe presentes, de forma presencial, nos três dias do evento</li>
-      </ul>
-
-      <div class="acoes">
-        <a class="botao botao--amarelo"
-           href="https://ecosmais.com.br/formulario/c1d71838bfd9b64f5c6c551725301f1fadfcf74858169e3a"
-           target="_blank" rel="noopener noreferrer">
-          Fazer a inscrição
-          <span class="so-leitor">de startup expositora no BTX 2026 (abre em nova aba)</span>
-        </a>
-        <a class="botao botao--contorno"
-           href="https://drive.google.com/drive/folders/1CG5T4LtcaJzUqHCqp4aRKf33auPNtRjw?usp=sharing"
-           target="_blank" rel="noopener noreferrer">
-          Ler o regulamento
-          <span class="so-leitor">completo do BTX 2026 (abre em nova aba)</span>
-        </a>
-      </div>
-
-      <p class="chamada-encerrada" hidden>Inscrições encerradas em 31/10, às 18h. Obrigada por acompanhar!</p>
-
-      <p class="chamada-nota">
-        Dúvidas: <a href="mailto:startupba@ba.sebrae.com.br">startupba@ba.sebrae.com.br</a><br>
-        Divulgação independente, feita por mim. A inscrição não garante a seleção; as informações oficiais estão no regulamento.
-      </p>
-    </section>
-
-    <!-- C. AGENDA DE EVENTOS -->
-    <section class="agenda" id="agenda" aria-labelledby="titulo-agenda">
-      <h2 id="titulo-agenda">Agenda de eventos tech</h2>
-      <p class="agenda-intro">Eventos que acho interessantes para a nossa comunidade. A lista é uma curadoria pessoal e não garante vagas ou inscrições abertas. Confira sempre a página oficial.</p>
-
-      <!-- Top eventos -->
-      <div class="destaque" aria-labelledby="titulo-destaque">
-        <div class="destaque-topo">
-          <h3 id="titulo-destaque">Top eventos</h3>
-        </div>
-        <p class="nota-selo">
-          <svg class="seta" viewBox="0 0 48 32" width="40" height="27" aria-hidden="true" focusable="false">
-            <path d="M3 6 C 14 4, 30 8, 40 24 M40 24 L 31 22 M40 24 L 39 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Seleção minha, sem vínculo com os organizadores.
+        <p class="chamada-prazo">
+          <span>Inscrições gratuitas até</span>
+          <strong>31/10</strong>
+          <span>às 18h, horário de Brasília</span>
         </p>
 
-        <ul class="lista-destaque">
-          <li class="evento evento--destaque" data-fim="2026-11-07">
-            <p class="data"><strong>07</strong><span>nov</span></p>
-            <div class="info">
-              <h4>DevFest Lauro de Freitas</h4>
-              <p class="categoria">Comunidade</p>
-              <a class="link" href="https://www.even3.com.br/devfest-lauro-de-freitas-2026-779585/" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do DevFest Lauro de Freitas (abre em nova aba)</span></a>
-            </div>
-          </li>
+        <dl class="chamada-datas">
+          <div><dt>13/10</dt><dd>Abertura das inscrições</dd></div>
+          <div><dt>13/11</dt><dd>Divulgação das selecionadas</dd></div>
+          <div><dt>05 a 07/12</dt><dd>Evento: BTX 2026</dd></div>
+        </dl>
 
-          <li class="evento evento--destaque" data-fim="2026-12-05">
-            <p class="data"><strong>05</strong><span>dez</span></p>
-            <div class="info">
-              <h4>DevOpsDays Salvador</h4>
-              <p class="categoria">DevOps</p>
-              <a class="link" href="https://tickets.devopsdays.org/devopsdays-salvador/2026/" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do DevOpsDays Salvador (abre em nova aba)</span></a>
-            </div>
-          </li>
-
-          <li class="evento evento--destaque" data-fim="2026-12-07">
-            <p class="data data--periodo"><strong>05 a 07</strong><span>dez</span></p>
-            <div class="info">
-              <h4>Bahia Tech Experience (BTX)</h4>
-              <p class="categoria">Tecnologia e inovação</p>
-              <a class="link" href="https://bahiatechexperience.com.br" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do Bahia Tech Experience (abre em nova aba)</span></a>
-            </div>
-          </li>
+        <ul class="chamada-regras">
+          <li>CNPJ ativo e regular no estado da Bahia</li>
+          <li>Startup em tração, com vendas em andamento, ou com produto ou solução finalizado e pronto para comercialização ou utilização</li>
+          <li>Uma inscrição por CNPJ</li>
+          <li>Duas pessoas da equipe presentes, de forma presencial, nos três dias do evento</li>
         </ul>
+
+        <div class="acoes">
+          <a class="botao botao--amarelo"
+             href="https://ecosmais.com.br/formulario/c1d71838bfd9b64f5c6c551725301f1fadfcf74858169e3a"
+             target="_blank" rel="noopener noreferrer">
+            Fazer a inscrição
+            <span class="so-leitor">de startup expositora no BTX 2026 (abre em nova aba)</span>
+          </a>
+          <a class="botao botao--contorno"
+             href="https://drive.google.com/drive/folders/1CG5T4LtcaJzUqHCqp4aRKf33auPNtRjw?usp=sharing"
+             target="_blank" rel="noopener noreferrer">
+            Ler o regulamento
+            <span class="so-leitor">completo do BTX 2026 (abre em nova aba)</span>
+          </a>
+        </div>
+
+        <p class="chamada-encerrada" hidden>Inscrições encerradas em 31/10, às 18h. Obrigada por acompanhar!</p>
+
+        <p class="chamada-nota">
+          Dúvidas: <a href="mailto:startupba@ba.sebrae.com.br">startupba@ba.sebrae.com.br</a><br>
+          Divulgação independente, feita por mim. A inscrição não garante a seleção; as informações oficiais estão no regulamento.
+        </p>
       </div>
+    </details>
 
-      <!-- Outubro -->
-      <section class="mes" aria-labelledby="mes-outubro">
-        <h3 id="mes-outubro">Outubro de 2026</h3>
-        <ul class="lista">
-          <li class="evento" data-fim="2026-10-16">
-            <p class="data data--periodo"><strong>13 a 16</strong><span>out</span></p>
-            <div class="info">
-              <h4>SIINTEC</h4>
-              <p class="categoria">Tecnologia</p>
-              <a class="link" href="https://doity.com.br/siintec2026" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do SIINTEC (abre em nova aba)</span></a>
-            </div>
-          </li>
+    <!-- DROPDOWN 2: AGENDA DE EVENTOS -->
+    <details class="bloco bloco--agenda" id="agenda">
+      <summary>
+        <span class="bloco-icone bloco-icone--turquesa" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" focusable="false"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="bloco-textos">
+          <h2 class="bloco-titulo">Agenda de eventos tech</h2>
+          <span class="bloco-sub">Salvador e Lauro de Freitas · out a dez de 2026</span>
+        </span>
+        <span class="bloco-seta" aria-hidden="true"></span>
+      </summary>
 
-          <li class="evento" data-fim="2026-10-14">
-            <p class="data"><strong>14</strong><span>out</span></p>
-            <div class="info">
-              <h4>III Workshop de Comunicação Quântica</h4>
-              <p class="categoria">Computação quântica</p>
-              <a class="link" href="https://doity.com.br/iii-workshop-de-comunicacao-quantica" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do III Workshop de Comunicação Quântica (abre em nova aba)</span></a>
-            </div>
-          </li>
+      <div class="bloco-conteudo">
+        <p class="agenda-intro">Eventos que acho interessantes para a nossa comunidade. A lista é uma curadoria pessoal e não garante vagas ou inscrições abertas. Confira sempre a página oficial.</p>
 
-          <li class="evento" data-fim="2026-10-16">
-            <p class="data"><strong>16</strong><span>out</span></p>
-            <div class="info">
-              <h4>Evidências Inteligentes: IA a Serviço da Justiça</h4>
-              <p class="categoria">Inteligência Artificial</p>
-              <a class="link" href="https://doity.com.br/evidencias-inteligentes-ia-a-servico-da-justica-1#registration" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do evento Evidências Inteligentes (abre em nova aba)</span></a>
-            </div>
-          </li>
+        <!--
+          COMO ADICIONAR UM EVENTO:
+          1. Copie um bloco <li class="evento" ...> inteiro.
+          2. Cole dentro do mês certo (ou copie um bloco <details class="sub"> para criar um mês novo).
+          3. Troque nome, categoria, data e link.
+          4. Em data-fim, escreva o último dia do evento no formato AAAA-MM-DD.
+             É com ele que o site marca sozinho quando o evento já passou.
+        -->
 
-          <li class="evento" data-fim="2026-10-20">
-            <p class="data"><strong>20</strong><span>out</span></p>
-            <div class="info">
-              <h4>Alterdata Experience Salvador</h4>
-              <p class="categoria">Tecnologia</p>
-              <a class="link" href="https://www.sympla.com.br/evento/alterdata-experience-salvador/3509482" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do Alterdata Experience Salvador (abre em nova aba)</span></a>
-            </div>
-          </li>
-        </ul>
-      </section>
+        <!-- Top eventos (abre por padrão) -->
+        <details class="sub sub--top" open>
+          <summary>
+            <span class="sub-textos">
+              <h3 class="sub-titulo">Top eventos</h3>
+              <span class="sub-nota">Seleção minha, sem vínculo com os organizadores.</span>
+            </span>
+            <span class="bloco-seta" aria-hidden="true"></span>
+          </summary>
+          <ul class="lista sub-conteudo">
+            <li class="evento evento--destaque" data-fim="2026-11-07">
+              <p class="data"><strong>07</strong><span>nov</span></p>
+              <div class="info">
+                <h4>DevFest Lauro de Freitas</h4>
+                <p class="categoria">Comunidade</p>
+                <a class="link" href="https://www.even3.com.br/devfest-lauro-de-freitas-2026-779585/" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do DevFest Lauro de Freitas (abre em nova aba)</span></a>
+              </div>
+            </li>
 
-      <!-- Novembro -->
-      <section class="mes" aria-labelledby="mes-novembro">
-        <h3 id="mes-novembro">Novembro de 2026</h3>
-        <ul class="lista">
-          <li class="evento" data-fim="2026-11-04">
-            <p class="data data--periodo"><strong>03 e 04</strong><span>nov</span></p>
-            <div class="info">
-              <h4>ERCAS</h4>
-              <p class="categoria">Computação</p>
-              <a class="link" href="https://centraldesistemas.sbc.org.br/ecos/ercas2026/" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do ERCAS (abre em nova aba)</span></a>
-            </div>
-          </li>
+            <li class="evento evento--destaque" data-fim="2026-12-05">
+              <p class="data"><strong>05</strong><span>dez</span></p>
+              <div class="info">
+                <h4>DevOpsDays Salvador</h4>
+                <p class="categoria">DevOps</p>
+                <a class="link" href="https://tickets.devopsdays.org/devopsdays-salvador/2026/" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do DevOpsDays Salvador (abre em nova aba)</span></a>
+              </div>
+            </li>
 
-          <li class="evento" data-fim="2026-11-07">
-            <p class="data"><strong>07</strong><span>nov</span></p>
-            <div class="info">
-              <h4>Nullbyte Security Conference</h4>
-              <p class="categoria">Segurança</p>
-              <a class="link" href="https://www.sympla.com.br/evento/nullbyte-security-conference-2026/3385269" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> da Nullbyte Security Conference (abre em nova aba)</span></a>
-            </div>
-          </li>
+            <li class="evento evento--destaque" data-fim="2026-12-07">
+              <p class="data data--periodo"><strong>05 a 07</strong><span>dez</span></p>
+              <div class="info">
+                <h4>Bahia Tech Experience (BTX)</h4>
+                <p class="categoria">Tecnologia e inovação</p>
+                <a class="link" href="https://bahiatechexperience.com.br" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do Bahia Tech Experience (abre em nova aba)</span></a>
+              </div>
+            </li>
+          </ul>
+        </details>
 
-          <li class="evento" data-fim="2026-11-13">
-            <p class="data data--periodo"><strong>09 a 13</strong><span>nov</span></p>
-            <div class="info">
-              <h4>ARAMUSS 2026</h4>
-              <p class="categoria">Veículos não tripulados</p>
-              <a class="link" href="https://aramuss.com/" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> da ARAMUSS 2026 (abre em nova aba)</span></a>
-            </div>
-          </li>
+        <!-- Novembro -->
+        <details class="sub">
+          <summary>
+            <span class="sub-textos">
+              <h3 class="sub-titulo">Novembro de 2026</h3>
+              <span class="sub-nota">6 eventos</span>
+            </span>
+            <span class="bloco-seta" aria-hidden="true"></span>
+          </summary>
+          <ul class="lista sub-conteudo">
+            <li class="evento" data-fim="2026-11-04">
+              <p class="data data--periodo"><strong>03 e 04</strong><span>nov</span></p>
+              <div class="info">
+                <h4>ERCAS</h4>
+                <p class="categoria">Computação</p>
+                <a class="link" href="https://centraldesistemas.sbc.org.br/ecos/ercas2026/" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do ERCAS (abre em nova aba)</span></a>
+              </div>
+            </li>
 
-          <li class="evento" data-fim="2026-11-12">
-            <p class="data"><strong>12</strong><span>nov</span></p>
-            <div class="info">
-              <h4>AI Governance Forum</h4>
-              <p class="categoria">IA e governança</p>
-              <a class="link" href="https://www.sympla.com.br/evento/ai-governance-forum/3469406" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do AI Governance Forum (abre em nova aba)</span></a>
-            </div>
-          </li>
+            <li class="evento" data-fim="2026-11-07">
+              <p class="data"><strong>07</strong><span>nov</span></p>
+              <div class="info">
+                <h4>Nullbyte Security Conference</h4>
+                <p class="categoria">Segurança</p>
+                <a class="link" href="https://www.sympla.com.br/evento/nullbyte-security-conference-2026/3385269" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> da Nullbyte Security Conference (abre em nova aba)</span></a>
+              </div>
+            </li>
 
-          <li class="evento" data-fim="2026-11-15">
-            <p class="data data--periodo"><strong>13 a 15</strong><span>nov</span></p>
-            <div class="info">
-              <h4>Hackathon SESI</h4>
-              <p class="categoria">Hackathon</p>
-              <a class="link" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=pRWWH3ymFkuB8O2vqLrxrv-53mg9KW1MloPgV_Gvl6dUREM3Q0VFNVFUVk4yRjZXWFlMQkw5NVZRMy4u" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do Hackathon SESI (abre em nova aba)</span></a>
-            </div>
-          </li>
+            <li class="evento" data-fim="2026-11-13">
+              <p class="data data--periodo"><strong>09 a 13</strong><span>nov</span></p>
+              <div class="info">
+                <h4>ARAMUSS 2026</h4>
+                <p class="categoria">Veículos não tripulados</p>
+                <a class="link" href="https://aramuss.com/" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> da ARAMUSS 2026 (abre em nova aba)</span></a>
+              </div>
+            </li>
 
-          <li class="evento" data-fim="2026-11-27">
-            <p class="data data--periodo"><strong>24 a 27</strong><span>nov</span></p>
-            <div class="info">
-              <h4>SBESC</h4>
-              <p class="categoria">Sistemas computacionais</p>
-              <a class="link" href="https://sbesc.lisha.ufsc.br/sbesc2026/Registration" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do SBESC (abre em nova aba)</span></a>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </section>
+            <li class="evento" data-fim="2026-11-12">
+              <p class="data"><strong>12</strong><span>nov</span></p>
+              <div class="info">
+                <h4>AI Governance Forum</h4>
+                <p class="categoria">IA e governança</p>
+                <a class="link" href="https://www.sympla.com.br/evento/ai-governance-forum/3469406" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do AI Governance Forum (abre em nova aba)</span></a>
+              </div>
+            </li>
 
-    <!-- D. ENCERRAMENTO -->
+            <li class="evento" data-fim="2026-11-15">
+              <p class="data data--periodo"><strong>13 a 15</strong><span>nov</span></p>
+              <div class="info">
+                <h4>Hackathon SESI</h4>
+                <p class="categoria">Hackathon</p>
+                <a class="link" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=pRWWH3ymFkuB8O2vqLrxrv-53mg9KW1MloPgV_Gvl6dUREM3Q0VFNVFUVk4yRjZXWFlMQkw5NVZRMy4u" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do Hackathon SESI (abre em nova aba)</span></a>
+              </div>
+            </li>
+
+            <li class="evento" data-fim="2026-11-27">
+              <p class="data data--periodo"><strong>24 a 27</strong><span>nov</span></p>
+              <div class="info">
+                <h4>SBESC</h4>
+                <p class="categoria">Sistemas computacionais</p>
+                <a class="link" href="https://sbesc.lisha.ufsc.br/sbesc2026/Registration" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do SBESC (abre em nova aba)</span></a>
+              </div>
+            </li>
+          </ul>
+        </details>
+
+        <!-- Outubro (eventos que já aconteceram) -->
+        <details class="sub">
+          <summary>
+            <span class="sub-textos">
+              <h3 class="sub-titulo">Outubro de 2026</h3>
+              <span class="sub-nota">Eventos que já aconteceram</span>
+            </span>
+            <span class="bloco-seta" aria-hidden="true"></span>
+          </summary>
+          <ul class="lista sub-conteudo">
+            <li class="evento" data-fim="2026-10-16">
+              <p class="data data--periodo"><strong>13 a 16</strong><span>out</span></p>
+              <div class="info">
+                <h4>SIINTEC</h4>
+                <p class="categoria">Tecnologia</p>
+                <a class="link" href="https://doity.com.br/siintec2026" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do SIINTEC (abre em nova aba)</span></a>
+              </div>
+            </li>
+
+            <li class="evento" data-fim="2026-10-14">
+              <p class="data"><strong>14</strong><span>out</span></p>
+              <div class="info">
+                <h4>III Workshop de Comunicação Quântica</h4>
+                <p class="categoria">Computação quântica</p>
+                <a class="link" href="https://doity.com.br/iii-workshop-de-comunicacao-quantica" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do III Workshop de Comunicação Quântica (abre em nova aba)</span></a>
+              </div>
+            </li>
+
+            <li class="evento" data-fim="2026-10-16">
+              <p class="data"><strong>16</strong><span>out</span></p>
+              <div class="info">
+                <h4>Evidências Inteligentes: IA a Serviço da Justiça</h4>
+                <p class="categoria">Inteligência Artificial</p>
+                <a class="link" href="https://doity.com.br/evidencias-inteligentes-ia-a-servico-da-justica-1#registration" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do evento Evidências Inteligentes (abre em nova aba)</span></a>
+              </div>
+            </li>
+
+            <li class="evento" data-fim="2026-10-20">
+              <p class="data"><strong>20</strong><span>out</span></p>
+              <div class="info">
+                <h4>Alterdata Experience Salvador</h4>
+                <p class="categoria">Tecnologia</p>
+                <a class="link" href="https://www.sympla.com.br/evento/alterdata-experience-salvador/3509482" target="_blank" rel="noopener noreferrer">Página oficial<span class="so-leitor"> do Alterdata Experience Salvador (abre em nova aba)</span></a>
+              </div>
+            </li>
+          </ul>
+        </details>
+      </div>
+    </details>
+
+    <!-- ENCERRAMENTO -->
     <footer class="encerramento">
       <svg class="onda" viewBox="0 0 240 24" width="180" height="18" aria-hidden="true" focusable="false">
         <path d="M2 14 C 22 2, 42 2, 62 12 S 102 22, 122 12 S 162 2, 182 12 S 222 20, 238 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -267,16 +309,33 @@
 
   </main>
 
-  <!-- Encerra sozinha a chamada do BTX depois do prazo (31/10/2026, 18h, horário de Brasília) -->
+  <!-- Abre o dropdown certo quando o link termina com #btx-startups ou #agenda,
+       e encerra sozinha a chamada do BTX depois do prazo (31/10/2026, 18h, horário de Brasília). -->
   <script>
     (function () {
+      function abrirPeloEndereco() {
+        var id = location.hash.slice(1);
+        if (!id) return;
+        var alvo = document.getElementById(id);
+        if (!alvo) return;
+        for (var n = alvo; n; n = n.parentElement) {
+          if (n.tagName === "DETAILS") n.open = true;
+        }
+        alvo.scrollIntoView();
+      }
+      abrirPeloEndereco();
+      window.addEventListener("hashchange", abrirPeloEndereco);
+
       var chamada = document.getElementById("btx-startups");
-      if (!chamada) return;
-      var fim = new Date(chamada.getAttribute("data-encerra"));
-      if (!isNaN(fim) && new Date() > fim) {
-        chamada.classList.add("encerrada");
-        var aviso = chamada.querySelector(".chamada-encerrada");
-        if (aviso) aviso.hidden = false;
+      if (chamada) {
+        var fim = new Date(chamada.getAttribute("data-encerra"));
+        if (!isNaN(fim) && new Date() > fim) {
+          chamada.classList.add("encerrada");
+          var aviso = chamada.querySelector(".chamada-encerrada");
+          if (aviso) aviso.hidden = false;
+          var sub = chamada.querySelector(".bloco-sub");
+          if (sub) sub.textContent = "Inscrições encerradas em 31/10, às 18h";
+        }
       }
     })();
   </script>
